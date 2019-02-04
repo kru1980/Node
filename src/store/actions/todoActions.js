@@ -12,7 +12,7 @@ export const fetchTodoStart = () => {
 export const fetchTodoSussess = todos => {
   return {
     type: typeActions.FETCH_TODO_SUCCESS,
-    payload: { ...todos }
+    payload: todos
   };
 };
 export const fetchTodoFail = error => {
@@ -22,14 +22,14 @@ export const fetchTodoFail = error => {
   };
 };
 
-export const fetchTodos = todos => {
+export const fetchTodos = () => {
   return dispatch => {
     dispatch(fetchTodoStart());
 
     // пишем запрос к серверу на аксиос
     try {
       axios
-        .get("/apa/todos")
+        .get("/api/todos")
         .then(response => response.data)
         .then(data => dispatch(fetchTodoSussess(data)));
     } catch (error) {

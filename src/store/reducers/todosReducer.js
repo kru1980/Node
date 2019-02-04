@@ -1,11 +1,11 @@
 import * as typeActions from "../actions/typeActions";
 
-const initialState = {
-  byId: {},
-  allIds: [],
-  loading: false,
-  error: null
-};
+// const initialState = {
+//   byId: {},
+//   allIds: [],
+//   loading: false,
+//   error: null
+// };
 
 // начальное состояние записей тодо в приложении
 const initState = {
