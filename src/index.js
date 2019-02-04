@@ -7,12 +7,17 @@ import App from "./App";
 import configureStore from "./store/configureStore";
 import * as serviceWorker from "./serviceWorker";
 
+import { LocaleProvider } from "antd";
+import ru_RU from "antd/lib/locale-provider/ru_RU";
+
 const store = configureStore();
 
 ReactDOM.render(
   <Provider store={store}>
     <Router>
-      <App />
+      <LocaleProvider locale={ru_RU}>
+        <App />
+      </LocaleProvider>
     </Router>
   </Provider>,
 

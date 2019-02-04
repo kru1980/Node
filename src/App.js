@@ -1,19 +1,17 @@
 import React, { Component } from "react";
-import { connect } from "react-redux";
+// import { connect } from "react-redux";
 import { Route, Switch } from "react-router-dom";
 
 import HomePage from "./Pages/HomePage";
 import NotFoundPage from "./Pages/NotFoundPage";
 
-import { fetchTodos } from "./store/actions/todoActions";
+// import { fetchTodos } from "./store/actions/todoActions";
 
 class App extends Component {
-  componentDidMount() {
-    this.props.fetchTodos();
-  }
+  // componentDidMount() {
+  //   this.props.fetchTodos();
+  // }
   render() {
-    console.log(this.props.todos);
-
     return (
       <div>
         <Switch>
@@ -25,13 +23,14 @@ class App extends Component {
   }
 }
 
-const mapStateToProps = state => {
-  return {
-    todos: state.todos
-  };
-};
+// const mapStateToProps = state => {
+//   return {
+//     todos: state.todos
+//   };
+// };
 
-export default connect(
-  mapStateToProps,
-  { fetchTodos }
-)(App);
+// export default connect(
+//   mapStateToProps,
+//   { fetchTodos }
+// )(App);
+export default App;
